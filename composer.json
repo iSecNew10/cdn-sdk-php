@@ -1,0 +1,30 @@
+{
+    "name": "isecnew10/cdn-sdk-php",
+    "description": "PHP SDK for iSecNew10 CDN microservice API",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/iSecNew10/cdn-sdk-php",
+    "authors": [
+        {
+            "name": "iSecNew10",
+            "email": "dev@isecnew10.com",
+            "homepage": "https://isecnew10.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "iSN10\\CDN\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "7.8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    }
+}

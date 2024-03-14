@@ -1,0 +1,7 @@
+# composer packages
+vendor
+
+# jetbrains ide
+.idea
+# macos
+.DS_Store
