@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/iSecNew10/cdn-sdk-php",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "iSecNew10",
