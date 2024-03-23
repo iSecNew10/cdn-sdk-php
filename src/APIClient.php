@@ -56,7 +56,7 @@ class APIClient
 	/**
 	 * @throws CDNException
 	 */
-	public function uploadPDF(string $filePath, ?string $name = ''): ?FileAsset
+	public function uploadPDF(string $filePath, ?string $name = null): ?FileAsset
 	{
 		return $this->uploadFile($filePath, $name, 'pdf');
 	}
@@ -64,7 +64,7 @@ class APIClient
 	/**
 	 * @throws CDNException
 	 */
-	public function uploadImage(string $filePath, ?string $name = ''): ?FileAsset
+	public function uploadImage(string $filePath, ?string $name = null): ?FileAsset
 	{
 		return $this->uploadFile($filePath, $name, 'image');
 	}
@@ -72,7 +72,7 @@ class APIClient
 	/**
 	 * @throws CDNException
 	 */
-	public function uploadVideo(string $filePath, ?string $name = ''): ?FileAsset
+	public function uploadVideo(string $filePath, ?string $name = null): ?FileAsset
 	{
 		return $this->uploadFile($filePath, $name, 'video');
 	}
@@ -80,7 +80,7 @@ class APIClient
 	/**
 	 * @throws CDNException
 	 */
-	public function uploadFile(string $filePath, ?string $name = '', ?string $fieldName = 'file'): ?FileAsset
+	public function uploadFile(string $filePath, ?string $name = null, ?string $fieldName = 'file'): ?FileAsset
 	{
 		try {
 			$response = $this->requestApi('post', 'push-' . $fieldName, [
@@ -88,7 +88,7 @@ class APIClient
 					[
 						'name' => $fieldName,
 						'contents' => file_get_contents($filePath),
-						'filename' => $name ?? basename($filePath),
+						'filename' => ($name ?: basename($filePath)),
 					],
 				],
 			]);
