@@ -17,10 +17,11 @@
             "iSN10\\CDN\\": "src/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "ext-json": "*",
-        "guzzlehttp/guzzle": "7.8.1"
+        "guzzlehttp/guzzle": "^7.8"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"

@@ -204,8 +204,7 @@ class APIClient
 	): array
 	{
 		if (
-			empty($response)
-			|| empty($response->getBody())
+			empty($response->getBody())
 			|| empty($plainResponse = $response->getBody()->getContents())
 			|| empty($jsonResponse = json_decode($plainResponse, true))) {
 			throw new CDNException(
